@@ -1,44 +1,106 @@
-# ofi-chain-forensics
+<div align="center">
 
-Bibliotecă Python open-source pentru **detecție de fraudă și spălare de
-bani pe blockchain**, prin analiza structurală a graficului de
-tranzacții (adrese, fluxuri, tipare). Modul complementar proiectului
-[Open Fraud Intelligence (OFI)](https://github.com/Ciprian-LocalPulse/open-fraud-intelligence).
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=ofi-chain-forensics&fontSize=46&fontColor=00FFB3&animation=fadeIn&fontAlignY=38&desc=Blockchain%20Fraud%20%26%20AML%20Pattern%20Detection&descAlignY=58&descSize=18" />
 
-**100% gratuit, licență MIT, fără cont, fără API key, fără limite de
-utilizare.**
+<br/>
 
-## De ce există
+<a href="https://github.com/Ciprian-LocalPulse/ofi-chain-forensics">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=900&color=00FFB3&center=true&vCenter=true&multiline=true&repeat=true&width=820&height=70&lines=Open-source+blockchain+forensics+%E2%80%94+100%25+gratuit;Clustering+%E2%80%A2+Pattern+Detection+%E2%80%A2+Explainable+Risk+Scoring;Fara+cont.+Fara+API+key.+Fara+limite." />
+</a>
 
-Majoritatea uneltelor de "blockchain forensics" sunt fie produse
-comerciale închise (Chainalysis, Elliptic — neaccesibile pentru
-cercetători independenți, ONG-uri sau jurnaliști de investigație fără
-buget), fie scripturi izolate, nedocumentate, fără teste. Acest proiect
-implementează euristicile consacrate din literatura de cercetare
-(citate explicit în [docs/methodology.md](docs/methodology.md)) într-o
-bibliotecă curată, testată și auditabilă, utilizabilă de oricine.
+<br/><br/>
 
-**Important — citește înainte să folosești rezultatele**: niciun scor
-produs aici NU e probă legală de fraudă. E un instrument de
-prioritizare pentru analiști umani. Detalii complete despre limitări și
-rate de fals-pozitiv cunoscute: [docs/methodology.md](docs/methodology.md).
+[![MIT License](https://img.shields.io/badge/license-MIT-00FFB3?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Tests](https://img.shields.io/badge/tests-21%20passing-00C853?style=for-the-badge&logo=pytest&logoColor=white)](tests/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-FF6F00?style=for-the-badge&logo=github&logoColor=white)](CONTRIBUTING.md)
 
-## Ce face
+![Repo Size](https://img.shields.io/github/repo-size/Ciprian-LocalPulse/ofi-chain-forensics?style=flat-square&color=00FFB3&label=repo%20size)
+![Last Commit](https://img.shields.io/github/last-commit/Ciprian-LocalPulse/ofi-chain-forensics?style=flat-square&color=00FFB3&label=last%20commit)
+![Issues](https://img.shields.io/github/issues/Ciprian-LocalPulse/ofi-chain-forensics?style=flat-square&color=00FFB3&label=issues)
+![Stars](https://img.shields.io/github/stars/Ciprian-LocalPulse/ofi-chain-forensics?style=social)
 
-- **Construiește un graf de tranzacții** dintr-o listă normalizată de
-  tranzacții (`ofi_chain_forensics.graph.TransactionGraph`).
-- **Clustering de adrese** prin Common-Input-Ownership Heuristic și
-  detecție de adrese de rest (`ofi_chain_forensics.clustering`).
-- **Detectoare de tipare suspecte**: peeling chain, fan-out, fan-in,
-  rapid pass-through (`ofi_chain_forensics.patterns`).
-- **Scoring de risc explicabil**, bazat pe reguli transparente — fiecare
-  punct de scor vine cu o explicație în limbaj natural
-  (`ofi_chain_forensics.risk_scoring`).
-- **Export** în CSV, JSON, și un format compatibil direct cu dataset-ul
-  OFI (`ofi_chain_forensics.export`).
-- **CLI funcțional**, gata de folosit din linia de comandă.
+<br/>
 
-## Instalare
+<img src="https://media.giphy.com/media/3o7TKz2bX3WjAh3ulu/giphy.gif" width="1" height="1" alt="" />
+
+</div>
+
+---
+
+<div align="center">
+
+### ⚡ De ce există
+
+</div>
+
+> [!IMPORTANT]
+> **Niciun scor produs aici NU e probă legală de fraudă.** E un instrument de prioritizare pentru analiști umani. Detalii complete: [docs/methodology.md](docs/methodology.md).
+
+Majoritatea uneltelor de "blockchain forensics" sunt fie produse comerciale închise (Chainalysis, Elliptic — neaccesibile pentru cercetători independenți, ONG-uri sau jurnaliști de investigație fără buget), fie scripturi izolate, nedocumentate, fără teste.
+
+Acest proiect implementează euristicile consacrate din literatura de cercetare (citate explicit în [docs/methodology.md](docs/methodology.md)) într-o bibliotecă **curată, testată și auditabilă**, utilizabilă de oricine — gratuit, fără cont, fără API key.
+
+---
+
+<div align="center">
+
+### 🔍 Ce face
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+**🕸️ Graf de tranzacții**
+<br/>
+Construiește un graf complet din date normalizate
+
+</td>
+<td align="center" width="33%">
+
+**🧬 Clustering de adrese**
+<br/>
+Common-Input-Ownership Heuristic + detecție adrese de rest
+
+</td>
+<td align="center" width="33%">
+
+**🚨 Detectoare de tipare**
+<br/>
+Peeling chain, fan-out, fan-in, rapid pass-through
+
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+
+**📊 Risk scoring explicabil**
+<br/>
+Fiecare punct de scor are o explicație în limbaj natural
+
+</td>
+<td align="center" width="33%">
+
+**📤 Export multi-format**
+<br/>
+CSV, JSON, compatibil direct cu dataset-ul OFI
+
+</td>
+<td align="center" width="33%">
+
+**⌨️ CLI funcțional**
+<br/>
+Gata de folosit din linia de comandă
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## 🚀 Instalare
 
 ```bash
 git clone https://github.com/Ciprian-LocalPulse/ofi-chain-forensics.git
@@ -52,7 +114,9 @@ Sau ca pachet editabil:
 pip install -e .
 ```
 
-## Utilizare rapidă — CLI
+---
+
+## ⚙️ Utilizare rapidă — CLI
 
 ```bash
 python -m ofi_chain_forensics.cli data/sample/sample_transactions.json \
@@ -63,9 +127,7 @@ python -m ofi_chain_forensics.cli data/sample/sample_transactions.json \
     --top 15
 ```
 
-Output:
-
-```
+```text
 Graf construit: 88 adrese, 42 tranzacții.
 
 Top 15 adrese după scor de risc:
@@ -77,7 +139,7 @@ PEEL0003                                         45.00  moderat
 ...
 ```
 
-## Utilizare rapidă — ca bibliotecă
+## 🐍 Utilizare rapidă — ca bibliotecă
 
 ```python
 from ofi_chain_forensics import TransactionGraph, score_addresses, top_risk_addresses
@@ -89,10 +151,11 @@ for s in top_risk_addresses(scores, n=10):
     print(s.address, s.score, s.risk_level)
 ```
 
-Vezi [examples/basic_usage.py](examples/basic_usage.py) pentru un exemplu
-complet, rulabil direct.
+Vezi [examples/basic_usage.py](examples/basic_usage.py) pentru un exemplu complet, rulabil direct.
 
-## Format de date așteptat
+---
+
+## 📦 Format de date așteptat
 
 ```json
 {
@@ -107,62 +170,67 @@ complet, rulabil direct.
 }
 ```
 
-Biblioteca nu se conectează la niciun blockchain live — lucrează pe date
-deja extrase și normalizate, indiferent de sursă (Bitcoin, Ethereum,
-orice altă rețea). Ghid pentru obținerea și normalizarea datelor reale:
-[docs/data_sources.md](docs/data_sources.md).
+Biblioteca nu se conectează la niciun blockchain live — lucrează pe date deja extrase și normalizate, indiferent de sursă (Bitcoin, Ethereum, orice altă rețea). Ghid pentru obținerea și normalizarea datelor reale: [docs/data_sources.md](docs/data_sources.md).
 
-## Rulare teste
+---
+
+## 🧪 Rulare teste
 
 ```bash
 pip install -r requirements-dev.txt
 pytest tests/ -v
 ```
 
-21 de teste, acoperă fiecare modul (graf, clustering, detectoare de
-tipare, scoring).
+<div align="center">
 
-## Integrare cu OFI
-
-Funcția `export_ofi_compatible()` produce direct format de intrare
-compatibil cu structura dataset-ului
-[Open Fraud Intelligence](https://github.com/Ciprian-LocalPulse/open-fraud-intelligence),
-pentru a putea importa adresele cu risc ridicat ca alerte/indicatori în
-ecosistemul OFI (compatibil OpenCTI/MISP via SDK-ul OFI existent).
-
-## Limitări — pe scurt
-
-- Nu identifică identități reale, doar adrese.
-- Nu detectează obfuscare avansată (CoinJoin, mixere bune, privacy coins).
-- Scoring bazat pe reguli, nu pe ML antrenat — predictibil și auditabil,
-  dar nu "învață" din date noi automat.
-- Rezultatele cer întotdeauna review uman.
-
-Detalii complete: [docs/methodology.md](docs/methodology.md).
-
-## Contribuții
-
-Vezi [CONTRIBUTING.md](CONTRIBUTING.md). Conectori pentru surse de date
-reale (Etherscan, Blockstream, noduri proprii) sunt deosebit de
-binevenite.
-
-## Licență
-
-MIT — vezi [LICENSE](LICENSE). Gratuit pentru orice utilizare, comercială
-sau necomercială, fără nicio condiție în afara păstrării notificării de
-copyright.
-
-## Susținere
-
-Acest proiect e dezvoltat și întreținut independent, fără finanțare
-instituțională. Dacă ți-a fost util,poti dona .
+![Tests](https://img.shields.io/badge/✓%2021%2F21%20tests%20passing-00C853?style=for-the-badge)
 
 </div>
 
-This repository is maintained independently, on personal time. If it has saved you hours of searching, taught you something, or you simply want to back independent open-access research and keep this list free for everyone, you can contribute directly through any of the channels below.
+21 de teste, acoperă fiecare modul (graf, clustering, detectoare de tipare, scoring).
 
-<table>
-<tr><td colspan="2">
+---
+
+## 🔗 Integrare cu OFI
+
+Funcția `export_ofi_compatible()` produce direct format de intrare compatibil cu structura dataset-ului [Open Fraud Intelligence](https://github.com/Ciprian-LocalPulse/open-fraud-intelligence), pentru a putea importa adresele cu risc ridicat ca alerte/indicatori în ecosistemul OFI (compatibil OpenCTI/MISP via SDK-ul OFI existent).
+
+---
+
+## ⚠️ Limitări — pe scurt
+
+| Limitare | Detaliu |
+|---|---|
+| 🆔 Identitate | Nu identifică identități reale, doar adrese |
+| 🌀 Obfuscare | Nu detectează CoinJoin, mixere bune, privacy coins |
+| 🤖 Scoring | Bazat pe reguli, nu pe ML antrenat — predictibil și auditabil, nu "învață" automat |
+| 👁️ Review | Rezultatele cer întotdeauna review uman |
+
+Detalii complete: [docs/methodology.md](docs/methodology.md).
+
+---
+
+## 🤝 Contribuții
+
+Vezi [CONTRIBUTING.md](CONTRIBUTING.md). Conectori pentru surse de date reale (Etherscan, Blockstream, noduri proprii) sunt deosebit de bineveniți.
+
+## 📄 Licență
+
+**MIT** — vezi [LICENSE](LICENSE). Gratuit pentru orice utilizare, comercială sau necomercială, fără nicio condiție în afara păstrării notificării de copyright.
+
+---
+
+<div align="center">
+
+## 💚 Susținere
+
+Acest proiect e dezvoltat și întreținut independent, fără finanțare instituțională.
+Dacă ți-a fost util, poți dona prin oricare din canalele de mai jos.
+
+</div>
+
+<table align="center">
+<tr><td colspan="2" align="center">
 
 ### 🇪🇺 European Payment — SEPA / EUR <sub>· CEA · AES-256</sub>
 
@@ -174,7 +242,7 @@ This repository is maintained independently, on personal time. If it has saved y
 | Bank | Wise, Rue du Trône 100, 3rd floor, Brussels, 1050, Belgium |
 
 </td></tr>
-<tr><td colspan="2">
+<tr><td colspan="2" align="center">
 
 ### 🇬🇧 United Kingdom Payment — Faster Payments / GBP <sub>· AIA · SHA-3</sub>
 
@@ -188,7 +256,7 @@ This repository is maintained independently, on personal time. If it has saved y
 | Bank | Wise Payments Limited, 1st Floor, Worship Square, 65 Clifton Street, London, EC2A 4JE, United Kingdom |
 
 </td></tr>
-<tr><td colspan="2">
+<tr><td colspan="2" align="center">
 
 ### 🇺🇸 United States Payment — ACH / Wire / USD <sub>· ICA · RSA-4096</sub>
 
@@ -209,5 +277,11 @@ This repository is maintained independently, on personal time. If it has saved y
 | ₿ Bitcoin (BTC) | Ξ Ethereum (ETH) | PP PayPal |
 |---|---|---|
 | `bc1qf3yy0w8z37rwavxpu38wem3yffpanw7wzj32qj` | `0x27d9a6a5b8507e6031bb044319410da96222d402` | [paypal.me/agentflowenterprise](https://paypal.me/agentflowenterprise) |
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=120&section=footer" />
+
+<sub>Made with ☕ and too much entropy, independently, in Romania.</sub>
 
 </div>
