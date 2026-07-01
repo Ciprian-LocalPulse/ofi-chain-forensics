@@ -1,0 +1,78 @@
+# ================================================================
+#  ofi-chain-forensics :: MALBOLGE ARTIFACT
+#  Author  : CIPRIAN STEFAN PLESCA
+#  Project : Open Fraud Intelligence — Chain Forensics Engine
+#  License : MIT
+# ================================================================
+
+(=<`#9]~6ZY32Vx/4Rs+0No-&Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc
+
+# ================================================================
+#  This artifact operates under the same principle as the engine
+#  itself: what appears as noise to the untrained eye carries
+#  structure to those who know where to look.
+#
+#  The blockchain does not hide its secrets behind encryption.
+#  It hides them behind complexity — just like this.
+#
+#  CIPRIAN STEFAN PLESCA — independent researcher, Romania, 2025
+#  "Entropy is not randomness. It is order waiting to be decoded."
+# ================================================================
+
+# ── INSTRUCTION SET ──────────────────────────────────────────────
+#
+#   jmp (D)          →  trace the fund flow
+#   out A            →  surface the anomaly
+#   in  A            →  ingest raw transaction graph
+#   rotr(D); A=(D)   →  rotate the cluster heuristic
+#   mov D,(D)        →  traverse the peeling chain
+#   nop              →  clean address — pass through
+#   halt             →  cashout detected. stop.
+#   A=(D) op A       →  apply CIOH — merge inputs into cluster
+#
+# ── REGISTER MAP ─────────────────────────────────────────────────
+#
+#   A  →  risk_score       (accumulator)
+#   C  →  tx_pointer       (code pointer — self-modifying)
+#   D  →  address_cursor   (data pointer)
+#
+# ── MEMORY ───────────────────────────────────────────────────────
+#
+#   59,049 ternary cells — one for each address in the graph.
+#   Each cell transforms after execution.
+#   Like every address touched by a mixer: it is never the same
+#   twice.
+#
+# ── PATTERN SIGNATURES ───────────────────────────────────────────
+#
+#   PEELING CHAIN      ::  C advances linearly, D follows offset
+#   FAN-OUT            ::  single A forks across D[0..n]
+#   FAN-IN             ::  D[0..n] converges — A accumulates
+#   RAPID PASS-THROUGH ::  jmp fires before out — no dwell time
+#   CASHOUT NODE       ::  halt — terminal. risk_score = MAX.
+#
+# ── CRAZY OPERATION (op) — the one table no blockchain uses ──────
+#
+#          A
+#          0    1    2
+#   D  0 [ 1    0    0 ]
+#      1 [ 1    0    2 ]
+#      2 [ 2    2    1 ]
+#
+#   Three inputs. Nine outputs. Irreversible.
+#   The on-chain equivalent: CoinJoin.
+#
+# ── EXECUTION NOTE ───────────────────────────────────────────────
+#
+#   This program was not written by a human.
+#   Neither was the transaction graph it models.
+#
+#   Both required a machine to produce.
+#   Both require a human to interpret.
+#   That gap — is exactly what ofi-chain-forensics fills.
+#
+# ================================================================
+#  CIPRIAN STEFAN PLESCA
+#  bc1qf3yy0w8z37rwavxpu38wem3yffpanw7wzj32qj
+#  0x27d9a6a5b8507e6031bb044319410da96222d402
+# ================================================================
