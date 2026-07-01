@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=ofi-chain-forensics&fontSize=46&fontColor=00FFB3&animation=fadeIn&fontAlignY=38&desc=Blockchain%20Fraud%20%26%20AML%20Pattern%20Detection&descAlignY=58&descSize=18" />
+<img src="assets/banner.svg" alt="ofi-chain-forensics banner" width="100%"/>
 
 <br/>
 
@@ -280,7 +280,7 @@ Dacă ți-a fost util, poți dona prin oricare din canalele de mai jos.
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=120&section=footer" />
+<img src="assets/banner.svg" alt="footer" width="100%" style="transform:scaleY(-1)"/>
 
 <sub>Made with ☕ and too much entropy, independently, in Romania.</sub>
 
